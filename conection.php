@@ -1,4 +1,5 @@
 <?php
+
 abstract class conection{
 	protected $o_db;
 	function __construct(){
@@ -6,11 +7,15 @@ abstract class conection{
 		$b="together_school";
 		$u="root";
 		$s='root';
-		$aux="mysql:host=$h;dbname=$b;$u;$s";
-		$this->o_db=new PDO($aux,$u,$s);
-		if(mysqli_connect_error())
-			exit('ERROR'.
-			mysqli_connect_error());
+		$aux = "mysql:host=$h;dbname=$b;$u;$s";
+		$this->o_db = new PDO($aux,$u,$s);
+		if(mysqli_connect_error()){
+			exit('ERROR'.mysqli_connect_error());
+		}
+		// Pseudo-random UUID
+		//$v4uuid = UUID::v4();
+
+		//echo "AQUI  $v4uuid";
 	}
 }
 ?>

@@ -1,24 +1,26 @@
+
 <?php
 if(!empty($listaAluno)){
-foreach($listaAluno as $r ){
-	$funcod=@$r->get('aluno-cod');
-	echo $funcod;
-	$funtel=@$r->get('funtel');
-	$funend=@$r->get('funend');
-	$funnome=@$r->get('funnome');
-	$funadm=@$r->get('funadm');
-	$funfuncao=@$r->get('funfuncao');
-//$qtd=@$r->get('qtd');
+  foreach($listaAluno as $r ){
+	 $funcod = @$r->get('aluno-cod');
+	 echo $funcod;
+	 $funtel = @$r->get('funtel');
+	 $funend=@$r->get('funend');
+	 $funnome=@$r->get('aluno-nome');
+	 $funadm=@$r->get('funadm');
+	 $funfuncao=@$r->get('funfuncao');
 
-}
+  }
 }
 ?>
 <?php
 function selected( $value, $selected ){
     return $value==$selected ? ' selected="selected"' : '';
 }
-?>
- <form class="form-horizontal" action='#' method=POST>
+?> 
+ <form class="form-horizontal" action=''  method = POST name="Form-Aluno" >
+ <INPUT TYPE="hidden" NAME="op" VALUE="Aluno">
+ <INPUT TYPE="hidden" NAME="op2" VALUE="calcAluno">
 <div class="row">
 <h1 class="text-center"> Cadastro Aluno</h1>
   <div class="col-sm-9">

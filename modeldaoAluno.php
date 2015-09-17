@@ -1,6 +1,8 @@
 <?php
+	require_once('UUID.php');
 	require_once('controllerAluno.php');
 	require_once('conection.php');
+
 class modeldaoAluno extends conection{
 	function __construct(){
 		parent::__construct();
@@ -58,19 +60,27 @@ class modeldaoAluno extends conection{
 		echo"nao deletado !!!";
 	}
 	public function salvarAluno(modelben $o){
-	   $id=@$o->get('funcod');
-	   if(empty($id))
-		$exec="insert into funcionarios(funtel,funend,funnome,funadm,funfuncao)
-		values('".$o->get('funtel')."','".$o->get('funend')."','".$o->get('funnome')."','".$o->get('funadm')."','".$o->get('funfuncao')."')";
+	   $id=@$o->get('idFun');
+	   if(empty($id)){
+	   		// recebe um id gerado 
+	   		$o->set('idFun', UUID::v4());
+	   		
+			$exec="insert into Aluno(id, nome, endereco, data_nasc, sexo)
+			values('".$o->get('idFun')."', '".$o->get('funnome')."', '".$o->get('funend')."', '".$o->get('funadm')."', '".$o->get('sexo')."')";
+			
+			echo "$exec";
+			// $exec="insert into Aluno(id)
+			// values('".$o->get('idFun')."')";
 		
-	   else
-		$exec="update funcionarios set funnome='".$o->get('funnome')."',
-		funtel='".$o->get('funtel')."',
-		funend='".$o->get('funend')."',
-		funadm='".$o->get('funadm')."',
-		funfuncao='".$o->get('funfuncao')."'
-		where funcod=$id";
-
+	   }else
+		{
+			$exec="update funcionarios set funnome='".$o->get('funnome')."',
+			funtel='".$o->get('funtel')."',
+			funend='".$o->get('funend')."',
+			funadm='".$o->get('funadm')."',
+			funfuncao='".$o->get('funfuncao')."'
+			where funcod=$id";
+		}
 
 		
 		try{

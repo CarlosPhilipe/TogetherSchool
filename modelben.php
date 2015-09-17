@@ -6,6 +6,7 @@ abstract class modelben{
 	private $formacaoFun;
 	private $cargoFun;
 	private $cpfFun;
+	private $sexo;
 
 	private $funcod;
 	private $funtel;

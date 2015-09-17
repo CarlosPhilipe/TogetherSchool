@@ -1,5 +1,7 @@
 <?php
+
 require_once('modelben.php');
+require_once('modeldao.php');
 require_once('modeldaoAluno.php');
 class controllerAluno extends modelben{
 	public function tela(modelben $o){
@@ -15,7 +17,7 @@ class controllerAluno extends modelben{
 	public function listaAluno(modelben $o){
 		$odao=new modeldaoAluno();
 		$listaAluno=$odao->listaAluno($o);
-		require_once('index.php');
+		require_once('listaAluno.php');
 	}
 	
 	public function delAluno(modelben $o){
@@ -31,19 +33,25 @@ class controllerAluno extends modelben{
 		require_once('cadastroAluno.php');
 	}
 	public function calcAluno(modelben $o){
+		// echo "AQUI1";
 		$this->set('funcod',@$_POST['funcod']);
+		$this->set('sexo',@$_POST['aluno-sexo']);
 		$this->set('funtel',@$_POST['funtel']);
-		$this->set('funend',@$_POST['funend']);
-		$this->set('funnome',@$_POST['funnome']);
+		$this->set('funend',@$_POST['aluno-endereco']);
+		$this->set('funnome',@$_POST['aluno-nome']);
 		$this->set('funfuncao',@$_POST['funfuncao']);
-		$d=explode('/',@$_POST['funadm']);
+		$d=explode('/',@$_POST['aluno-dataNasc']);
 		$data="$d[2]-$d[1]-$d[0]";
 		$this->set('funadm',$data);
 
-		$odao=new modeldaoAluno();
+
+		// echo "AQUI2";
+		$odao= new modeldaoAluno();
+		//echo "AQUI3";	
 		$odao->salvarAluno($o);
 		$sit="DADOS SALVOS COM SUCESSO!!!";
 		$this->telaAluno($o);
+		
 	}
 	
 
