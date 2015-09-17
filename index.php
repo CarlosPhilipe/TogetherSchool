@@ -41,9 +41,15 @@
     </ul>
   </li>
 
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-  
+  <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Turmas <span class="caret"></span>
+    </a>
+     <ul class="dropdown-menu">
+            <li><a href="?op=Aluno&op2=telaAluno">Inserir</a></li>
+            <li><a href="?op=Aluno&op2=listaAluno">Listar </a></li>
+    </ul>
+  </li>
   </li>
 </ul>
 
