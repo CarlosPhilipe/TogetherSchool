@@ -15,7 +15,7 @@ class controllerAluno extends modelben{
 	public function listaAluno(modelben $o){
 		$odao=new modeldaoAluno();
 		$listaAluno=$odao->listaAluno($o);
-		require_once('listaAluno.php');
+		require_once('index.php');
 	}
 	
 	public function delAluno(modelben $o){

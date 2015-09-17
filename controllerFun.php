@@ -15,7 +15,7 @@ class controllerFun extends modelben{
 	public function lista(modelben $o){
 		$odao=new modeldao();
 		$lista=$odao->lista($o);
-		require_once('lista.php');
+		require_once('index.php');
 	}
 	
 	public function del(modelben $o){

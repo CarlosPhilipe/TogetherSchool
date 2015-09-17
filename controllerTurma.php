@@ -15,7 +15,7 @@ class controllerTurma extends modelben{
 	public function listaTurma(modelben $o){
 		$odao=new modeldaoTurma();
 		$listaTurma=$odao->listaTurma($o);
-		require_once('listaTurma.php');
+		require_once('index.php');
 	}
 	
 	public function delTurma(modelben $o){

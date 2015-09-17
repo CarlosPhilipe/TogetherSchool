@@ -44,14 +44,14 @@ function selected( $value, $selected ){
       <div class="col-xs-8 col-sm-6">
         <label for="inputEmail3" class="col-sm-2 control-label">Data</label>
       <div class="col-sm-10">
-          <input type="text" class="form-control" id="exampleInputName2" placeholder="Data de nascimento">
+          <input type="text" class="form-control" id="exampleInputName2" name="aluno-dataNasc" placeholder="Data de nascimento">
       </div>
 
         </div>
         <div class="col-xs-8  col-sm-6">
           <label for="inputPassword3" class="col-sm-2 control-label">Endereço</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Endereço">
+            <input type="text" class="form-control" id="exampleInputName2" name="aluno-endereco" placeholder="Endereço">
         </div>
       </div>
     </div>
@@ -60,19 +60,25 @@ function selected( $value, $selected ){
       <div class="col-xs-8 col-sm-6">
         <label for="select" class="col-sm-2 control-label">Sexo</label>
       <div class="col-sm-10">
-          <select class="form-control">
+          <select class="form-control" name="aluno-sexo">
           <option>Sexo</option>
           <option>Masculino</option>
           <option>Feminino</option>
 
           </select>
       </div>
-
-       
-    </div>
+  </div>
   </div>
 
-
+<div class="row">
+      <div class="col-xs-10 col-sm-6">
+        <label for="select" class="col-sm-2 control-label">Alergias</label>
+      <div class="col-sm-10">
+          <textarea class="form-control" rows="3" name="aluno-listAlergias" placeholder="Lista de alergias"></textarea>
+      </div>
+       
+    </div>
+</div>
 	<div class="col-sm-9 text-center">
 	    <div class="row">
 		    <div class="col-xs-8 col-sm-6">
