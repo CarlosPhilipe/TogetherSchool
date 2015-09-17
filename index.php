@@ -56,16 +56,16 @@
 
  <?php
 
-                  $op=@$_REQUEST['op'];
-                  $op2=@$_REQUEST['op2'];
-                  if(!empty($op)){
-                  $url="controller".$op;
-                  require_once("$url.php");
+       $op=@$_REQUEST['op'];
+       $op2=@$_REQUEST['op2'];
+      if(!empty($op)){
+          $url="controller".$op;
+          require_once("$url.php");
                   //echo " <hr> $url <br>";
-                  $o=new $url();
-                  $o->$op2($o);
-                }
-      ?>
+          $o=new $url();
+          $o->$op2($o);
+        }
+  ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">

@@ -55,6 +55,21 @@ function selected( $value, $selected ){
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-8 col-sm-6">
+        <label for="select" class="col-sm-2 control-label">Sexo</label>
+      <div class="col-sm-10">
+          <select class="form-control">
+          <option>Sexo</option>
+          <option>Masculino</option>
+          <option>Feminino</option>
+
+          </select>
+      </div>
+
+       
+    </div>
   </div>
 
 
