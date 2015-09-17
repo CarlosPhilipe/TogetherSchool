@@ -9,7 +9,7 @@ class controllerFun extends modelben{
 		require_once('index.php');
 	}
 	public function telaFun(modelben $o){
-		require_once('cadastro.php');
+		require_once('cadastroFun.php');
 	}
 	
 	public function lista(modelben $o){

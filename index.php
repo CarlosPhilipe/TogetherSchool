@@ -31,6 +31,16 @@
     </ul>
   </li>
 
+  <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+      Funcionário <span class="caret"></span>
+    </a>
+     <ul class="dropdown-menu">
+            <li><a href="?op=Fun&op2=telaFun">Inserir</a></li>
+            <li><a href="?op=Fun&op2=listaFun">Listar </a></li>
+    </ul>
+  </li>
+
   <li role="presentation"><a href="#">Profile</a></li>
   <li role="presentation"><a href="#">Messages</a></li>
   
@@ -52,7 +62,8 @@
       ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
