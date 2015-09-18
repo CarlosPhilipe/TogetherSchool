@@ -68,7 +68,7 @@ class modeldaoAluno extends conection{
 			$exec="insert into Aluno(id, nome, endereco, data_nasc, sexo)
 			values('".$o->get('idFun')."', '".$o->get('funnome')."', '".$o->get('funend')."', '".$o->get('funadm')."', '".$o->get('sexo')."')";
 			
-			echo "$exec";
+			//echo "$exec";
 			// $exec="insert into Aluno(id)
 			// values('".$o->get('idFun')."')";
 		
